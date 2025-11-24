@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidLearn - 技术支持</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #007AFF, #5856D6);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .support-section {
+            margin-bottom: 40px;
+        }
+        
+        .support-section h2 {
+            color: #007AFF;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-left: 4px solid #007AFF;
+            padding-left: 15px;
+        }
+        
+        .contact-method {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,122,255,0.1);
+        }
+        
+        .contact-method h3 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-method h3 i {
+            color: #007AFF;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .email-link:hover {
+            background: #0056CC;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,122,255,0.3);
+        }
+        
+        .language-section {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        
+        .language-section h3 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .language-content {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .language-content > div {
+            flex: 1;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .language-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>VidLearn 技术支持</h1>
+            <p>我们随时为您提供帮助</p>
+        </div>
+        
+        <div class="content">
+            <div class="support-section">
+                <h2>联系我们</h2>
+                
+                <div class="contact-method">
+                    <h3>📧 电子邮件支持</h3>
+                    <p>如果您在使用过程中遇到任何问题，请随时给我们发邮件。我们会在24小时内回复您。</p>
+                    <a href="mailto:lucky202408@gmail.com" class="email-link">
+                        发送邮件至：lucky202408@gmail.com
+                    </a>
+                </div>
+                
+                <div class="contact-method">
+                    <h3>💡 问题反馈</h3>
+                    <p>请详细描述您遇到的问题，包括：</p>
+                    <ul style="margin: 15px 0 15px 20px;">
+                        <li>您使用的 macOS 版本</li>
+                        <li>VidLearn 的版本号</li>
+                        <li>问题的具体表现和重现步骤</li>
+                        <li>相关的截图或屏幕录制</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="language-section">
+                <h3>多语言支持 / Multilingual Support</h3>
+                <div class="language-content">
+                    <div>
+                        <h4>中文支持</h4>
+                        <p>如果您在使用过程中有问题请留言或发邮件我。</p>
+                        <p>邮箱地址：lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #28a745;">谢谢！</p>
+                    </div>
+                    <div>
+                        <h4>English Support</h4>
+                        <p>If you have any questions, please leave a message or send me an email.</p>
+                        <p>Email：lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #28a745;">Thank you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2024 VidLearn. 保留所有权利。</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                <a href="privacy.html" style="color: #007AFF; margin-right: 15px;">隐私政策</a>
+                <a href="terms.html" style="color: #007AFF;">用户协议</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
