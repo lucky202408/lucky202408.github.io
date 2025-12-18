@@ -1,134 +1,225 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CirTrack — Privacy Policy</title>
-  <style>
-    :root{
-      --bg:#ffffff; --text:#111827; --muted:#6b7280; --accent:#0ea5a4;
-      --container: 900px;
-    }
-    body{
-      font-family: system-ui, -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      margin:0; padding:2rem; color:var(--text); background:var(--bg); line-height:1.6;
-    }
-    .wrap{max-width:var(--container); margin:0 auto;}
-    header h1{margin:0; font-size:1.5rem;}
-    .meta{color:var(--muted); font-size:0.95rem;}
-    section{margin-top:1.5rem; padding-top:1rem; border-top:1px solid #eef2f6;}
-    h2,h3,h4{margin:0.8rem 0 0.4rem;}
-    ul{margin:0.25rem 0 0.75rem 1.25rem;}
-    table{border-collapse:collapse; margin:0.5rem 0;}
-    th,td{padding:0.4rem 0.6rem; border:1px solid #eef2f6;}
-    footer{margin-top:2rem; color:var(--muted); font-size:0.92rem;}
-    @media (prefers-color-scheme:dark){
-      :root{--bg:#0b1220;--text:#e6eef8;--muted:#9aa9bb;--accent:#34d399;}
-    }
-  </style>
-</head>
-<body>
-  <div class="wrap">
-    <header>
-      <h1>CirTrack Privacy Policy</h1>
-      <p class="meta">Last Updated: 2025-12-05</p>
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>CirTrack — Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #0ea5a4;
+        --container: 900px;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        margin: 0;
+        padding: 2rem;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .wrap {
+        max-width: var(--container);
+        margin: 0 auto;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      section {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eef2f6;
+      }
+      h2,
+      h3,
+      h4 {
+        margin: 0.8rem 0 0.4rem;
+      }
+      ul {
+        margin: 0.25rem 0 0.75rem 1.25rem;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0.5rem 0;
+      }
+      th,
+      td {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #eef2f6;
+      }
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --text: #e6eef8;
+          --muted: #9aa9bb;
+          --accent: #34d399;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>CirTrack Privacy Policy</h1>
+        <p class="meta">Last Updated: December 5, 2025</p>
+      </header>
 
-    <section>
-      <h2>1. Overview</h2>
-      <p>CirTrack is an iOS and macOS application for diet tracking and fitness management. We follow a strict data-minimization approach: data stays on your device by default and is synced only with your permission through Apple services such as iCloud, HealthKit and StoreKit.</p>
+      <section>
+        <h2>1. Overview</h2>
+        <p>
+          CirTrack is a diet management and fitness tracking application
+          available on iOS and macOS. We follow the principle of
+          “data minimization.” By default, user data is stored locally on
+          the device. Services such as iCloud, HealthKit, and StoreKit
+          are used only with your explicit authorization to enable
+          synchronization or other related features.
+        </p>
 
-      <h3>1.1 Purchase Verification (StoreKit)</h3>
-      <p>To validate in-app purchases, we receive necessary entitlement information from Apple, such as:</p>
-      <ul>
-        <li>Your purchase status</li>
-        <li>Transaction identifiers used for validation</li>
-      </ul>
-      <p>No payment card or billing info is accessible to us.</p>
+        <h3>1.1 Purchase Verification Information (StoreKit)</h3>
+        <p>
+          To verify subscription or in-app purchase status, we receive
+          necessary purchase verification data from Apple, including:
+        </p>
+        <ul>
+          <li>Purchase status (whether you have active subscription benefits)</li>
+          <li>Transaction identifiers and required verification fields</li>
+        </ul>
+        <p>
+          We do not have access to your payment method or billing details.
+        </p>
 
-      <h3>1.2 iCloud Sync (optional)</h3>
-      <p>If you enable iCloud, synced data may include:</p>
-      <ul>
-        <li>Diet logs (time, photos, notes)</li>
-        <li>Food library, custom foods and tags</li>
-        <li>Workout plans and logs</li>
-        <li>Tasks, check-ins, countdowns</li>
-        <li>App settings and multi-user data</li>
-      </ul>
+        <h3>1.2 iCloud Synchronization (Optional)</h3>
+        <p>If you enable iCloud, the following data may be synchronized:</p>
+        <ul>
+          <li>Diet records (timestamps, photos, text)</li>
+          <li>Workout and training records</li>
+          <li>
+            To-do items, check-ins, countdowns, timers, storage records,
+            and related data
+          </li>
+        </ul>
 
-      <h3>1.3 HealthKit (optional)</h3>
-      <p>With your permission, CirTrack may read:</p>
-      <ul>
-        <li>Weight, steps, heart rate, sleep, active energy, distance</li>
-      </ul>
+        <h3>1.3 HealthKit (Optional)</h3>
+        <p>With your authorization, CirTrack may read the following health data:</p>
+        <ul>
+          <li>Body weight, steps, heart rate, sleep, active energy, distance</li>
+        </ul>
 
-      <h3>1.4 App Analytics (anonymous)</h3>
-      <p>If enabled in system settings, Apple may share anonymized crash and performance reports to help improve the app.</p>
-    </section>
+        <h3>1.4 App Analytics (Anonymous, Optional)</h3>
+        <p>
+          If you enable “Share Analytics with Developers” at the system level,
+          Apple may provide us with anonymous crash reports and performance data.
+        </p>
+      </section>
 
-    <section>
-      <h2>2. Information We Do Not Collect</h2>
-      <ul>
-        <li>No credit card or billing data</li>
-        <li>No personal content without your explicit consent</li>
-        <li>Your data is never sold or shared with third parties</li>
-      </ul>
-    </section>
+      <section>
+        <h2>2. Information We Do Not Collect</h2>
+        <ul>
+          <li>Payment card numbers or billing addresses</li>
+          <li>Any personal content without your authorization</li>
+          <li>We do not sell or share your data</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>3. How We Use Your Data</h2>
-      <ul>
-        <li>Validate your purchase entitlement</li>
-        <li>Enable app features such as syncing and logging</li>
-        <li>Improve performance (anonymous diagnostics only)</li>
-      </ul>
-    </section>
+      <section>
+        <h2>3. Purpose of Data Usage</h2>
+        <ul>
+          <li>To verify subscription or membership status</li>
+          <li>To provide core application functionality</li>
+          <li>To improve stability using anonymous data</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>4. Third-Party Services</h2>
-      <table>
-        <tr><th>Service</th><th>Purpose</th></tr>
-        <tr><td>StoreKit</td><td>Purchase validation</td></tr>
-        <tr><td>iCloud / CloudKit</td><td>Data syncing</td></tr>
-        <tr><td>HealthKit</td><td>Read health data</td></tr>
-        <tr><td>Photos Access</td><td>Attach diet photos</td></tr>
-      </table>
-    </section>
+      <section>
+        <h2>4. Third-Party Services Used</h2>
+        <table>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>StoreKit</td>
+            <td>In-app purchase verification</td>
+          </tr>
+          <tr>
+            <td>iCloud / CloudKit</td>
+            <td>Data synchronization</td>
+          </tr>
+          <tr>
+            <td>HealthKit</td>
+            <td>Reading health data</td>
+          </tr>
+          <tr>
+            <td>Photo Library Access</td>
+            <td>Photo selection and storage (diet records, storage items, etc.)</td>
+          </tr>
+        </table>
+      </section>
 
-    <section>
-      <h2>5. Data Retention</h2>
-      <p>Local data stays on your device and can be deleted anytime. iCloud data is stored and managed by Apple.</p>
-    </section>
+      <section>
+        <h2>5. Data Retention and Deletion</h2>
+        <p>
+          Local data is stored on your device and can be deleted at any time.
+          iCloud data is managed by Apple and can be removed through
+          your iCloud settings.
+        </p>
+      </section>
 
-    <section>
-      <h2>6. Data Security</h2>
-      <ul>
-        <li>No developer-operated servers (data stays on device or iCloud)</li>
-        <li>iCloud storage is encrypted</li>
-        <li>Crash logs are anonymized</li>
-      </ul>
-    </section>
+      <section>
+        <h2>6. Data Security</h2>
+        <ul>
+          <li>We do not operate our own servers (data remains on device or iCloud)</li>
+          <li>iCloud data is encrypted and protected by Apple</li>
+          <li>Crash logs are anonymous</li>
+        </ul>
+      </section>
 
-    <section>
-      <h2>7. Children's Privacy</h2>
-      <p>CirTrack does not target children under 13 and does not knowingly collect their information.</p>
-    </section>
+      <section>
+        <h2>7. Children’s Privacy</h2>
+        <p>
+          This application is not intended for children under the age of 13,
+          and we do not knowingly collect such information.
+        </p>
+      </section>
 
-    <section>
-      <h2>8. Updates to This Policy</h2>
-      <p>Updates will be published on this page and reflected in the "Last Updated" date.</p>
-    </section>
+      <section>
+        <h2>8. Policy Updates</h2>
+        <p>
+          We may update this Privacy Policy from time to time.
+          The latest update date will be displayed at the top of this page.
+        </p>
+      </section>
 
-    <section>
-      <h2>9. Contact Us</h2>
-      <p>If you have questions or need data removal assistance, contact us:<br>
-        <strong>lucky202408@gmail.com</strong>
-      </p>
-    </section>
+      <section>
+        <h2>9. Contact Information</h2>
+        <p>
+          If you have any privacy-related questions, please contact:<br />
+          <strong>lucky202408@gmail.com</strong>
+        </p>
+      </section>
 
-    <footer>
-      <p>© 2025 CirTrack. All rights reserved.</p>
-    </footer>
-  </div>
-</body>
+      <footer>
+        <p>© 2025 CirTrack. The latest published version of this policy shall prevail.</p>
+      </footer>
+    </div>
+  </body>
 </html>
