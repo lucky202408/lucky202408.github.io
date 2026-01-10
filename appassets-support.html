@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppAssets - 技术支持 / Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5, #4338ca);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .support-section {
+            margin-bottom: 40px;
+        }
+
+        .support-section h2 {
+            color: #4338ca;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-left: 4px solid #4338ca;
+            padding-left: 15px;
+        }
+
+        .contact-method {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79,70,229,0.15);
+        }
+
+        .contact-method h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #4f46e5;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .email-link:hover {
+            background: #3730a3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79,70,229,0.3);
+        }
+
+        .language-section {
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .language-section h3 {
+            color: #3730a3;
+            margin-bottom: 15px;
+        }
+
+        .language-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .language-content > div {
+            flex: 1;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .container { margin: 20px auto; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 2em; }
+            .content { padding: 30px 20px; }
+            .language-content { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>AppAssets 技术支持 / Support</h1>
+            <p>App Store 截图 · 图标 · 素材管理 / Screenshots · Icons · Assets</p>
+        </div>
+
+        <div class="content">
+            <div class="support-section">
+                <h2>联系我们 / Contact Us</h2>
+
+                <div class="contact-method">
+                    <h3>📧 邮件支持 / Email Support</h3>
+                    <p>在使用 AppAssets 处理 App Store 截图、图标或导出素材时遇到问题？欢迎联系我们。</p>
+                    <p>If you encounter any issues while using AppAssets, feel free to email us.</p>
+
+                    <a href="mailto:support@appassets.app" class="email-link">
+                        Email: support@appassets.app
+                    </a>
+                </div>
+
+                <div class="contact-method">
+                    <h3>🛠 问题反馈指南 / Issue Reporting Guide</h3>
+                    <p>为了更高效地定位与解决问题，请在邮件中包含：</p>
+                    <p>Please include the following details:</p>
+
+                    <ul style="margin: 15px 0 15px 20px;">
+                        <li>macOS 版本 / macOS version</li>
+                        <li>AppAssets 应用版本 / AppAssets version</li>
+                        <li>素材类型（截图 / 图标）</li>
+                        <li>问题描述与复现步骤 / Description & steps</li>
+                        <li>相关截图（如有）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="language-section">
+                <h3>多语言支持 / Multilingual Support</h3>
+
+                <div class="language-content">
+                    <div>
+                        <h4>中文支持</h4>
+                        <p>欢迎反馈 Bug、功能建议或使用体验。</p>
+                        <p>邮箱：support@appassets.app</p>
+                        <p style="margin-top: 15px; color: #16a34a;">感谢你的支持！</p>
+                    </div>
+
+                    <div>
+                        <h4>English Support</h4>
+                        <p>Bug reports and feature requests are welcome.</p>
+                        <p>Email: support@appassets.app</p>
+                        <p style="margin-top: 15px; color: #16a34a;">Thank you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 AppAssets. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                <a href="privacy.html" style="color: #4f46e5; margin-right: 15px;">Privacy Policy</a>
+                <a href="terms.html" style="color: #4f46e5;">Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
