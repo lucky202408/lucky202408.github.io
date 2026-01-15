@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>强了么 - 技术支持 / Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1a1625 0%, #2c2545 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a1625, #3b2f5f);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .support-section {
+            margin-bottom: 40px;
+        }
+
+        .support-section h2 {
+            color: #1a1625;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-left: 4px solid #1a1625;
+            padding-left: 15px;
+        }
+
+        .contact-method {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(26,22,37,0.15);
+        }
+
+        .contact-method h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #1a1625;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .email-link:hover {
+            background: #2f2750;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(26,22,37,0.3);
+        }
+
+        .language-section {
+            background: #f1f0f5;
+            border: 1px solid #e2e0eb;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .language-section h3 {
+            color: #1a1625;
+            margin-bottom: 15px;
+        }
+
+        .language-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .language-content > div {
+            flex: 1;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .container { margin: 20px auto; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 2em; }
+            .content { padding: 30px 20px; }
+            .language-content { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>强了么 技术支持 / Support</h1>
+        </div>
+
+        <div class="content">
+            <div class="support-section">
+                <h2>联系我们 / Contact Us</h2>
+
+                <div class="contact-method">
+                    <h3>📧 电子邮件支持 / Email Support</h3>
+                    <p>如果您在使用 <strong>强了么</strong> 的过程中遇到任何问题，欢迎随时通过邮件联系我们。</p>
+                    <p>If you encounter any issues while using <strong>Qiang Le Me</strong>, feel free to contact us via email.</p>
+
+                    <a href="mailto:lucky202408@gmail.com" class="email-link">
+                        Email: lucky202408@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-method">
+                    <h3>💡 问题反馈指南 / How to Report an Issue</h3>
+                    <p>为帮助我们更快理解与定位问题，请尽量提供以下信息：</p>
+                    <p>Please include the following details to help us better understand the issue:</p>
+
+                    <ul style="margin: 15px 0 15px 20px;">
+                        <li>iOS 系统版本 / iOS version</li>
+                        <li>强了么 App 版本号 / App version</li>
+                        <li>问题描述与出现时机 / Issue description & when it occurs</li>
+                        <li>相关截图（如有）/ Screenshots (if available)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="language-section">
+                <h3>多语言支持 / Multilingual Support</h3>
+
+                <div class="language-content">
+                    <div>
+                        <h4>中文支持</h4>
+                        <p>欢迎反馈使用中的问题、建议或改进想法。</p>
+                        <p>联系邮箱：lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #28a745;">每天强一点 💪</p>
+                    </div>
+
+                    <div>
+                        <h4>English Support</h4>
+                        <p>If you have any questions or suggestions, feel free to contact us.</p>
+                        <p>Email: lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #28a745;">Get a little stronger every day 💪</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 强了么. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                <a href="privacy.html" style="color: #1a1625; margin-right: 15px;">隐私政策 / Privacy Policy</a>
+                <a href="terms.html" style="color: #1a1625;">用户协议 / Terms of Use</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
