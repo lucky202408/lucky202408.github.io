@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Helmic — Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #10b981;
+        --container: 900px;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        margin: 0;
+        padding: 2rem;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .wrap {
+        max-width: var(--container);
+        margin: 0 auto;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      section {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eef2f6;
+      }
+      h2,
+      h3,
+      h4 {
+        margin: 0.8rem 0 0.4rem;
+      }
+      ul {
+        margin: 0.25rem 0 0.75rem 1.25rem;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0.5rem 0;
+      }
+      th,
+      td {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #eef2f6;
+      }
+      code {
+        padding: 0.05rem 0.3rem;
+        border-radius: 4px;
+        background: #f3f4f6;
+        font-size: 0.9em;
+      }
+      a {
+        color: var(--accent);
+      }
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --text: #e6eef8;
+          --muted: #9aa9bb;
+          --accent: #34d399;
+        }
+        section,
+        th,
+        td {
+          border-color: #1e2939;
+        }
+        code {
+          background: #1e2939;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Helmic Privacy Policy</h1>
+        <p class="meta">Last Updated: October 3, 2026</p>
+      </header>
+
+      <section>
+        <h2>1. Overview</h2>
+        <p>
+          Helmic is an App Store Connect workspace for iPhone and Mac. It is
+          strictly a client: you bring an API key that you created yourself in
+          App Store Connect, and Helmic then talks directly to Apple from your
+          device. We follow the principle of “data minimization.” There is
+          no Helmic account to register, no server operated by us, and no
+          analytics or advertising SDK built into the app. By default, all data
+          stays on your device.
+        </p>
+
+        <h3>1.1 API Credentials You Supply (Keychain)</h3>
+        <p>
+          To sign a request, Helmic needs an App Store Connect API credential:
+          the Issuer ID, the Key ID, the private key, and — for sales reports —
+          your Vendor Number. These are saved to your device's Keychain under
+          the service name <code>com.helmic.app.appstore-connect</code> and are
+          used for one purpose only: to sign a short-lived token that is sent
+          over HTTPS to <code>api.appstoreconnect.apple.com</code>.
+        </p>
+        <ul>
+          <li>
+            We never receive your credential — we have no server to send it to
+          </li>
+          <li>Private keys are never written to the app's runtime log</li>
+          <li>
+            Removing the account inside Helmic deletes the Keychain item
+            immediately; nothing else about it is retained
+          </li>
+        </ul>
+
+        <h3>1.2 Your Store Data (Sales, Reviews, Versions, Builds)</h3>
+        <p>
+          When you open sales figures, customer reviews, versions or builds,
+          Helmic requests that data from Apple on your behalf and displays it on
+          screen. Because the request is signed with your own key, Apple returns
+          only what your key is entitled to access. This data is held in memory
+          for the current session and is cleared when the app quits; it is not
+          uploaded to us and it is not shared with any third party.
+        </p>
+
+        <h3>1.3 Notifications and Background Refresh (Optional)</h3>
+        <p>
+          If you grant notification permission, Helmic posts local notifications
+          on your device (for example, when a new App Store review arrives).
+          Background refresh merely repeats the same read-only requests to Apple
+          while the app is in the background. You can turn both off at any time
+          in the app or in system settings.
+        </p>
+
+        <h3>1.4 App Analytics (Anonymous, Optional)</h3>
+        <p>
+          If you enable “Share Analytics with Developers” at the system level,
+          Apple may provide us with anonymous crash reports and performance data.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Information We Do Not Collect</h2>
+        <ul>
+          <li>
+            Your name, email address, phone number or any identity record —
+            there is no sign-up
+          </li>
+          <li>
+            Payment card numbers or billing addresses — Helmic offers no in-app
+            purchases and no subscriptions
+          </li>
+          <li>
+            Advertising identifiers and cross-app tracking data (none are used,
+            so no tracking occurs)
+          </li>
+          <li>
+            The content of your store data — sales figures, reviews, app names
+            and screenshots travel only between your device and Apple
+          </li>
+          <li>We do not sell or share your data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Purpose of Data Usage</h2>
+        <ul>
+          <li>
+            To authenticate your requests against the Apple App Store Connect
+            API
+          </li>
+          <li>To display and help you manage your own app's store data</li>
+          <li>To deliver the local notifications you explicitly enable</li>
+          <li>To improve stability using anonymous crash data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Third-Party Services Used</h2>
+        <table>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>Apple App Store Connect API</td>
+            <td>
+              The only network endpoint Helmic contacts, for reading and
+              updating your own store data
+            </td>
+          </tr>
+          <tr>
+            <td>Apple Keychain</td>
+            <td>Storing the API credential you add, on-device</td>
+          </tr>
+          <tr>
+            <td>Apple Transporter (Mac, optional)</td>
+            <td>Uploading a build file that you explicitly choose</td>
+          </tr>
+        </table>
+        <p>
+          No analytics, crash-reporting or advertising SDK from any third party
+          is embedded in the app.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Data Retention and Deletion</h2>
+        <ul>
+          <li>
+            API credential: deleted as soon as you remove the account in Helmic's
+            settings
+          </li>
+          <li>
+            Fetched store data: session memory only, gone when the app quits
+          </li>
+          <li>
+            Runtime log (at most the 200 most recent lines) and small display
+            preferences: stored locally and clearable at any time
+          </li>
+          <li>Sales reports are parsed in memory and are not written to disk</li>
+        </ul>
+        <p>
+          Because we operate no server, there is nothing on our side to export or
+          erase: your data either lives on your device or is held by Apple under
+          your own developer account.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Data Security</h2>
+        <ul>
+          <li>
+            No Helmic-operated servers; all traffic goes directly over
+            HTTPS/TLS to Apple
+          </li>
+          <li>
+            Credentials live in the system Keychain rather than in files or plain
+            preferences
+          </li>
+          <li>
+            The Mac App Store build runs sandboxed with only two entitlements:
+            outbound network access and read/write for files you explicitly
+            select
+          </li>
+          <li>
+            Key and Issuer identifiers are masked in the interface by default and
+            require an explicit action to reveal
+          </li>
+          <li>
+            Helmic relies on standard OS encryption only and is declared
+            export-compliant as exempt encryption
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7. Children’s Privacy</h2>
+        <p>
+          Helmic is a developer tool that requires an App Store Connect account.
+          It is not intended for children under the age of 13, and we do not
+          knowingly collect such information.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Policy Updates</h2>
+        <p>
+          We may update this Privacy Policy from time to time. The latest update
+          date will be displayed at the top of this page.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Contact Information</h2>
+        <p>
+          If you have any privacy-related questions, please contact:<br />
+          <strong>lucky202408@gmail.com</strong>
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          © 2026 Helmic. The latest published version of this policy shall
+          prevail.
+        </p>
+        <p>
+          <a href="helmic-support.html">Support</a> ·
+          <a href="helmic-zh-privacy.html">隐私政策（中文）</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

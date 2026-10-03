@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helmic - 技术支持 / Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #10b981, #047857);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.4em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .support-section {
+            margin-bottom: 40px;
+        }
+
+        .support-section h2 {
+            color: #047857;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-left: 4px solid #047857;
+            padding-left: 15px;
+        }
+
+        .contact-method {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(4,120,87,0.15);
+        }
+
+        .contact-method h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-method ul {
+            margin: 15px 0 15px 20px;
+        }
+
+        .contact-method li {
+            margin-bottom: 4px;
+        }
+
+        .warning {
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+            color: #9a3412;
+            font-size: 0.95em;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #047857;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .email-link:hover {
+            background: #065f46;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(4,120,87,0.3);
+        }
+
+        .language-section {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .language-section h3 {
+            color: #047857;
+            margin-bottom: 15px;
+        }
+
+        .language-content {
+            display: flex;
+            gap: 30px;
+        }
+
+        .language-content > div {
+            flex: 1;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .footer a {
+            color: #047857;
+        }
+
+        @media (max-width: 768px) {
+            .container { margin: 20px auto; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 2em; }
+            .content { padding: 30px 20px; }
+            .language-content { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Helmic 技术支持 / Support</h1>
+            <p>私密 · 轻量 · App Store Connect 随身工作台</p>
+            <p>Private · Lightweight · App Store Connect on the go</p>
+        </div>
+
+        <div class="content">
+            <div class="support-section">
+                <h2>联系我们 / Contact Us</h2>
+
+                <div class="contact-method">
+                    <h3>📧 邮件支持 / Email Support</h3>
+                    <p>在 iPhone 或 Mac 上使用 Helmic 查看销售数据、回复评论、管理版本与构建时遇到问题？欢迎联系我们。</p>
+                    <p>If you run into trouble with sales reports, reviews, versions or builds in Helmic, please email us.</p>
+
+                    <a href="mailto:lucky202408@gmail.com" class="email-link">
+                        Email: lucky202408@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-method">
+                    <h3>🛠 问题反馈指南 / Issue Reporting Guide</h3>
+                    <p>为了更高效地定位问题，请在邮件中包含：</p>
+                    <p>Please include the following details:</p>
+
+                    <ul>
+                        <li>设备与系统版本 / Device &amp; OS version（iPhone · iOS 18 / Mac · macOS 15）</li>
+                        <li>Helmic 版本 / Helmic app version</li>
+                        <li>所在页面或功能 / Which page or feature（销售、评论、版本、构建、TestFlight 等）</li>
+                        <li>是否为 Apple 接口返回的错误，并附上应用内显示的错误文字 / Any error text shown in the app</li>
+                        <li>问题描述与复现步骤 / Description &amp; steps</li>
+                        <li>相关截图（如有）/ Screenshots if available</li>
+                    </ul>
+
+                    <div class="warning">
+                        🔐 <strong>安全提示 / Security note</strong><br>
+                        请不要在邮件中附上你的 API 私钥（<code>.p8</code> 文件内容）、完整的 Key ID 或 Issuer ID——我们不需要它们就能排查，而拿到它们的人可以改动你商店里的数据。若已误发，请立即在 App Store Connect 中吊销该密钥并重新生成。<br>
+                        Please never attach your private key, full Key ID or Issuer ID to a support email. If you already sent one, revoke that key in App Store Connect right away.
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <h3>🔑 凭证与账号 / Credentials &amp; Accounts</h3>
+                    <p>Helmic 不运营任何服务器，你的 App Store Connect API 凭证只保存在你自己设备的钥匙串里。因此我们无法代你查询、恢复或重置密钥。</p>
+                    <p>Helmic runs no servers, and your API credential lives only in your device's Keychain, so we cannot look it up, restore or reset it for you.</p>
+                    <ul>
+                        <li>密钥失效、权限不足或需要重建：请在 App Store Connect →「用户和访问」→「集成」→「App Store Connect API」中自行操作</li>
+                        <li>Regenerate a key under App Store Connect → Users and Access → Integrations → App Store Connect API</li>
+                        <li>换了新设备：在新设备上重新添加同一组凭证即可，旧设备上的可在应用内删除</li>
+                        <li>Replace a device by adding the same credential again; remove it from the old device in Helmic's settings</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="language-section">
+                <h3>多语言支持 / Multilingual Support</h3>
+
+                <div class="language-content">
+                    <div>
+                        <h4>中文支持</h4>
+                        <p>欢迎反馈 Bug、功能建议或使用体验。</p>
+                        <p>邮箱：lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #16a34a;">感谢你的支持！</p>
+                    </div>
+
+                    <div>
+                        <h4>English Support</h4>
+                        <p>Bug reports and feature requests are welcome.</p>
+                        <p>Email: lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #16a34a;">Thank you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Helmic. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                <a href="helmic-zh-privacy.html" style="margin-right: 15px;">隐私政策 / Privacy Policy</a>
+                <a href="helmic-en-privacy.html">English Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Helmic — 隐私政策</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #10b981;
+        --container: 900px;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "PingFang SC", "Microsoft YaHei", sans-serif;
+        margin: 0;
+        padding: 2rem;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.8;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .wrap {
+        max-width: var(--container);
+        margin: 0 auto;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      section {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eef2f6;
+      }
+      h2,
+      h3,
+      h4 {
+        margin: 0.8rem 0 0.4rem;
+      }
+      ul {
+        margin: 0.25rem 0 0.75rem 1.25rem;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0.5rem 0;
+      }
+      th,
+      td {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #eef2f6;
+      }
+      code {
+        padding: 0.05rem 0.3rem;
+        border-radius: 4px;
+        background: #f3f4f6;
+        font-size: 0.9em;
+      }
+      a {
+        color: var(--accent);
+      }
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --text: #e6eef8;
+          --muted: #9aa9bb;
+          --accent: #34d399;
+        }
+        section,
+        th,
+        td {
+          border-color: #1e2939;
+        }
+        code {
+          background: #1e2939;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Helmic 隐私政策</h1>
+        <p class="meta">最后更新日期：2026-10-03</p>
+      </header>
+
+      <section>
+        <h2>1. 概述</h2>
+        <p>
+          Helmic 是一款运行于 iPhone 与 Mac 的 App Store
+          Connect 工作台。它自始至终只是一个客户端：你使用自己在 App Store
+          Connect 中创建的 API 密钥，Helmic
+          随后从你的设备直接访问 Apple 的接口。我们遵循“最小化数据收集”原则：没有需要注册的
+          Helmic 账号，不运营任何自有服务器，应用内也没有内置统计或广告
+          SDK，默认情况下所有数据都保存在你的设备本地。
+        </p>
+
+        <h3>1.1 由你提供的 API 凭证（保存在钥匙串中）</h3>
+        <p>
+          为了对请求签名，Helmic 需要一组 App Store Connect API
+          凭证：Issuer ID、Key ID、私钥，以及用于下载销售报表的 Vendor Number。它们被写入设备的系统钥匙串（服务名
+          <code>com.helmic.app.appstore-connect</code>），且只用于一件事：签发一个短时效令牌，通过
+          HTTPS 发送给 <code>api.appstoreconnect.apple.com</code>。
+        </p>
+        <ul>
+          <li>我们不会收到你的凭证——我们没有可接收它的服务器</li>
+          <li>私钥内容不会写入应用内的运行日志</li>
+          <li>在应用内删除账号会立即移除对应的钥匙串条目，其余部分不会被保留</li>
+        </ul>
+
+        <h3>1.2 你的商店数据（销售、评论、版本、构建）</h3>
+        <p>
+          当你查看销售数据、用户评论、版本或构建时，Helmic
+          会代你向 Apple 请求这些数据并显示在屏幕上。请求由你自己的密钥签名，因此
+          Apple 只会返回该密钥有权访问的范围。这些数据仅驻留在当前会话的内存中，退出应用即清空，不会上传给我们，也不会共享给任何第三方。
+        </p>
+
+        <h3>1.3 通知与后台刷新（可选）</h3>
+        <p>
+          在你授权通知权限后，Helmic
+          会在你的设备上发出本地通知（例如收到新的 App Store
+          评论）。后台刷新只是在应用退到后台时，重复执行同样的只读请求。两者都可以随时在应用内或系统设置中关闭。
+        </p>
+
+        <h3>1.4 应用分析（匿名，可选）</h3>
+        <p>
+          若你在系统中启用了“与开发者共享分析数据”，Apple
+          可能向我们提供匿名的崩溃日志与性能数据。
+        </p>
+      </section>
+
+      <section>
+        <h2>2. 我们不会收集的信息</h2>
+        <ul>
+          <li>姓名、邮箱、手机号等任何身份信息（应用无需注册）</li>
+          <li>支付卡号或账单信息——Helmic 不提供内购，也没有订阅</li>
+          <li>广告标识符与跨应用追踪数据（未使用，因此不存在追踪）</li>
+          <li>
+            你的商店数据内容：销售数字、评论内容、应用名称与截图只在你自己的设备与
+            Apple 之间传输
+          </li>
+          <li>不会出售或共享您的数据</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. 数据使用目的</h2>
+        <ul>
+          <li>向你自己的 Apple App Store Connect API 请求完成身份验证</li>
+          <li>展示并帮助你管理自己应用的商店数据</li>
+          <li>发送你主动开启的本地通知</li>
+          <li>改进稳定性（匿名数据）</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. 使用的第三方服务</h2>
+        <table>
+          <tr>
+            <th>服务</th>
+            <th>用途</th>
+          </tr>
+          <tr>
+            <td>Apple App Store Connect API</td>
+            <td>Helmic 唯一访问的网络接口，用于读取和更新你自己的商店数据</td>
+          </tr>
+          <tr>
+            <td>Apple 钥匙串</td>
+            <td>在本机保存你添加的 API 凭证</td>
+          </tr>
+          <tr>
+            <td>Apple Transporter（Mac，可选）</td>
+            <td>上传你主动选择的构建文件</td>
+          </tr>
+        </table>
+        <p>应用内未集成任何第三方的统计、崩溃上报或广告 SDK。</p>
+      </section>
+
+      <section>
+        <h2>5. 数据保留与删除</h2>
+        <ul>
+          <li>API 凭证：在 Helmic 设置中删除账号即刻移除</li>
+          <li>已拉取的商店数据：仅存在于会话内存，退出应用即消失</li>
+          <li>
+            运行日志（最多保留最近 200 条）与少量界面偏好设置保存在本地，可随时清除
+          </li>
+          <li>销售报表在内存中解析，不会写入磁盘</li>
+        </ul>
+        <p>
+          由于我们不运营服务器，服务端没有任何数据可供导出或删除：你的数据要么留在你自己的设备上，要么由
+          Apple 在你的开发者账号下持有。
+        </p>
+      </section>
+
+      <section>
+        <h2>6. 数据安全</h2>
+        <ul>
+          <li>没有 Helmic 运营的服务器，全部请求通过 HTTPS/TLS 直达 Apple</li>
+          <li>凭证存放于系统钥匙串，而非普通文件或明文偏好设置</li>
+          <li>
+            Mac App Store
+            版本运行在沙盒中，仅有两项权限：对外网络连接，以及读写你明确选择的文件
+          </li>
+          <li>界面默认对 Key ID、Issuer ID 等标识做脱敏显示，需要你主动操作才会展开</li>
+          <li>仅使用操作系统提供的标准加密，出口合规申报为豁免加密</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7. 儿童隐私</h2>
+        <p>
+          Helmic 是需要 App Store
+          Connect 账号的开发者工具，不面向 13
+          岁以下儿童，也不会主动收集此类信息。
+        </p>
+      </section>
+
+      <section>
+        <h2>8. 政策更新</h2>
+        <p>我们可能会定期更新本政策，并在页面顶部显示更新时间。</p>
+      </section>
+
+      <section>
+        <h2>9. 联系方式</h2>
+        <p>
+          如有隐私问题请联系：<br />
+          <strong>lucky202408@gmail.com</strong>
+        </p>
+      </section>
+
+      <footer>
+        <p>© 2026 Helmic. 隐私权政策以最新发布版本为准。</p>
+        <p>
+          <a href="helmic-support.html">技术支持</a> ·
+          <a href="helmic-en-privacy.html">Privacy Policy (English)</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
