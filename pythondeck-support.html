@@ -236,14 +236,21 @@
 
                 <details class="faq">
                     <summary>Git push/pull 认证失败 / Git authentication fails</summary>
-                    <p>请检查 设置 → Git 与凭据 中该主机是否已保存用户名与令牌（令牌存于钥匙串，留空表示沿用原值）。HTTPS 远端需使用访问令牌而非账号密码；SSH 远端需先在 设置 → SSH Hosts 中保存主机与凭据。</p>
-                    <p>HTTPS remotes require a personal access token; SSH remotes require a saved host with credentials under Settings → SSH Hosts.</p>
+                    <p>请检查 设置 → Git 与凭据 中该主机是否已保存用户名与令牌（令牌存于钥匙串，留空表示沿用原值）。HTTPS 远端需使用访问令牌而非账号密码；SSH 远端需先在 设置 → 开发环境 → SSH 主机 中保存主机与凭据（Git over SSH 属于会员功能）。</p>
+                    <p>HTTPS remotes require a personal access token; SSH remotes require a saved host with credentials under Settings → Development → SSH Hosts (Git over SSH is a Pro feature).</p>
                 </details>
 
                 <details class="faq">
                     <summary>SSH 提示主机密钥已变更并被拒绝 / "host key changed" error</summary>
-                    <p>主机密钥采用"首次信任"机制并保存 SHA256 指纹。指纹变化通常是服务器重装或密钥轮换，也可能是中间人风险。请先在服务器侧核对指纹，确认无误后再在 App 内删除该主机并重新连接。也可通过 设置 → SSH Hosts → Import known_hosts 预先导入指纹。</p>
+                    <p>主机密钥采用"首次信任"机制并保存 SHA256 指纹。指纹变化通常是服务器重装或密钥轮换，也可能是中间人风险。请先在服务器侧核对指纹，确认无误后再在 App 内删除该主机并重新连接。也可通过 设置 → 开发环境 → SSH 主机 → 导入 known_hosts 预先导入指纹。</p>
                     <p>Verify the new fingerprint on the server itself before trusting it again; you can import <code>known_hosts</code> to pin keys in advance.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>远程终端 / SFTP / Git over SSH 提示需要 Pro / "needs PythonDeck Pro"</summary>
+                    <p>远程开发包（SSH 远程终端、SFTP 远程文件编辑与回传、通过 SSH 的 Git 推拉）是 <strong>PythonDeck Pro</strong> 会员功能。未开通时仍可以免费录入、修改和删除主机配置，只是无法建立连接；终端与 Git 输出里会提示需要 Pro。</p>
+                    <p>开通入口：<strong>设置 → 会员 → PythonDeck Pro</strong>。已经买过但仍提示未解锁，请先确认登录的是同一 App Store 账户，再进 <strong>设置 → PythonDeck Pro → 恢复购买</strong>。</p>
+                    <p>The remote development pack (SSH terminal, editing remote files over SFTP, Git over SSH) requires PythonDeck Pro. Adding and editing host records stays free; only the connection is gated. If you already bought it, use the same App Store account and tap Restore Purchases.</p>
                 </details>
 
                 <details class="faq">
@@ -305,6 +312,9 @@
             <p style="margin-top: 10px; font-size: 0.9em;">
                 <a href="pythondeck-en-privacy.html" style="color: #4338ca; margin-right: 15px;">Privacy Policy (English)</a>
                 <a href="pythondeck-zh-privacy.html" style="color: #4338ca;">隐私政策（中文）</a>
+            </p>
+            <p style="margin-top: 6px; font-size: 0.9em;">
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula" style="color: #4338ca;">Terms of Use / 使用条款（Apple Standard EULA）</a>
             </p>
         </div>
     </div>

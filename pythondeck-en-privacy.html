@@ -122,7 +122,11 @@
           PythonDeck sells two products that unlock the same PythonDeck Pro
           tier: an <strong>Annual Membership</strong> (auto-renewable
           subscription) and a <strong>Lifetime Membership</strong> (non-consumable
-          purchase). Verification runs entirely on your device through Apple's
+          purchase). Pro unlocks remote development: an SSH terminal against a
+          server you added, opening and writing back remote files over SFTP, and
+          Git clone/push/pull over SSH. Those features talk to servers you own
+          and configure yourself (see 1.5); we do not relay or retain their
+          content. Verification runs entirely on your device through Apple's
           StoreKit, and consists of:
         </p>
         <ul>
@@ -191,10 +195,22 @@
           Online features send data only to the endpoints you configure, and
           only while you actively use that feature — for example the prompt
           and code you submit to an AI provider, the PyPI requests when you
-          install a package, or your <code>git push</code> to a remote
-          repository. The privacy policies of those third-party services apply
-          to that traffic, and we do not receive or store a copy of it on our
-          own servers.
+          install a package, your <code>git push</code> to a remote
+          repository, or the SSH/SFTP traffic of remote development against a
+          server you own. Those endpoints and credentials come from you:
+          <strong>the AI features run on your own API key and provider
+          account</strong>. Quota, invoicing and usage are settled directly
+          between you and the provider — we take no part in that billing and
+          have no access to your provider account.
+        </p>
+        <p>
+          Using these features therefore means complying with the provider's
+          own terms of service and usage policies, including any rules on
+          automated calls, content use and redistribution, at your own cost.
+          The privacy policies of those services apply to that traffic, and we
+          do not receive or store a copy of it on our own servers. You are also
+          responsible for the servers you connect to and for the commands you
+          run on them.
         </p>
       </section>
 
@@ -296,15 +312,61 @@
           <li>All user content stays inside the app sandbox on your device; we maintain no servers that store it</li>
           <li>Membership verification is performed locally by StoreKit; we keep no receipts, transaction logs or purchase history</li>
           <li>Secrets are stored in the iOS Keychain and are never synced or written into project files, exports or logs</li>
-          <li>Network requests for packages, Git over HTTPS and AI calls use HTTPS with certificate validation (bundled CA store); the app declares no encryption exemption (<code>ITSAppUsesNonExemptEncryption = false</code>)</li>
+          <li>Network requests for packages, Git over HTTPS and AI calls use HTTPS with certificate validation (bundled CA store). The app's encryption usage falls entirely within the exemptions available under the U.S. Export Administration Regulations, so the Info.plist key <code>ITSAppUsesNonExemptEncryption</code> is set to <code>false</code>. See section 7 (Export Compliance) below for details.</li>
           <li>SSH host keys use trust-on-first-use with stored SHA256 fingerprints; a changed fingerprint blocks the connection unless you re-confirm it</li>
           <li>The AI assistant requires per-capability approval (Read / Write / Execute / Network / Install / Git), and file changes must be accepted through a diff view</li>
           <li>If you enable “Share iPhone Analytics with Developers” at the system level, Apple may provide us with anonymous crash and performance diagnostics; we do not add our own analytics on top of these</li>
         </ul>
       </section>
 
+      <section id="export-compliance">
+        <h2>7. Export Compliance</h2>
+        <p>
+          PythonDeck bundles standard open-source cryptography libraries so
+          that user scripts can implement their own security workflows. In
+          particular:
+        </p>
+        <ul>
+          <li><strong>Transport:</strong> HTTPS and WSS requests to PyPI, Git
+            remotes, AI providers and MCP servers use iOS's
+            <code>URLSession</code> / <code>Security.framework</code> stack
+            (Apple-supplied TLS). Git-over-SSH uses
+            <code>swift-crypto</code>, which is a wrapper over Apple's
+            <code>CryptoKit</code>.</li>
+          <li><strong>Bundled third-party cryptography:</strong> The
+            <code>cryptography</code> Python package (currently 47.0.0, built
+            against OpenSSL 3.x via Rust/cffi) is pre-installed inside the app
+            bundle so user scripts can import it offline. Symmetric algorithms
+            ship at up to AES-256; asymmetric algorithms ship at RSA-4096 and
+            Ed25519.</li>
+          <li><strong>At-rest:</strong> Only the iOS Keychain (Apple's
+            hardware-backed storage) is used for API keys and credentials.
+            No proprietary ciphers are implemented by us.</li>
+        </ul>
+        <p>
+          This distribution falls within the "mass market" commodity
+          category under U.S. Export Administration Regulations (EAR)
+          §740.17(b)(1), which permits worldwide public distribution of
+          standard encryption software through consumer channels such as the
+          Apple App Store. No individual export license from the U.S.
+          Bureau of Industry and Security (BIS) is required for PythonDeck's
+          distribution scope.
+        </p>
+        <p>
+          <em>Notice to users (EAR §740.17(e)(2)):</em> Export and re-export
+          of encryption software and technology is regulated by the United
+          States and other countries. PythonDeck and its bundled
+          cryptography components may not be lawfully exported or
+          re-exported to any country or person listed on the U.S.
+          Treasury's Specially Designated Nationals list or subject to a
+          U.S. comprehensive embargo. By downloading or using this app, you
+          agree to comply with all applicable export-control laws and to
+          not use the app for any purpose prohibited by those laws.
+        </p>
+      </section>
+
       <section>
-        <h2>7. Children’s Privacy</h2>
+        <h2>8. Children’s Privacy</h2>
         <p>
           This application is a developer tool and is not intended for children
           under the age of 13, and we do not knowingly collect such information.
@@ -312,7 +374,7 @@
       </section>
 
       <section>
-        <h2>8. Policy Updates</h2>
+        <h2>9. Policy Updates</h2>
         <p>
           We may update this Privacy Policy from time to time, for example when
           new features or permissions are added. The latest update date is
@@ -322,7 +384,7 @@
       </section>
 
       <section>
-        <h2>9. Contact Information</h2>
+        <h2>10. Contact Information</h2>
         <p>
           If you have any privacy-related questions, please contact:<br />
           <strong>lucky202408@gmail.com</strong>
@@ -334,7 +396,8 @@
           © 2026 PythonDeck. The latest published version of
           this policy shall prevail.<br />
           Support: <a href="pythondeck-support.html">pythondeck-support.html</a>
-          · 中文版: <a href="pythondeck-zh-privacy.html">隐私政策</a>
+          · 中文版: <a href="pythondeck-zh-privacy.html">隐私政策</a><br />
+          Terms of Use: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Apple Standard End User License Agreement (STDEULA)</a>
         </p>
       </footer>
     </div>

@@ -116,7 +116,10 @@
         <h3>1.1 购买与订阅验证（StoreKit）</h3>
         <p>
           PythonDeck 提供两种开通 PythonDeck Pro 的方式：年度会员（自动续费订阅）与
-          终身会员（非消耗型一次性购买）。购买与权益验证全部通过 Apple 的 StoreKit
+          终身会员（非消耗型一次性购买）。Pro 解锁的是远程开发能力：连接你自己添加的服务器使用
+          SSH 远程终端、通过 SFTP 打开与回传远程文件、以及通过 SSH 的 Git
+          clone/push/pull。这些能力连的都是你自行拥有与配置的服务器（详见 1.5），我们不中继、不留存其中的内容。
+          购买与权益验证全部通过 Apple 的 StoreKit
           在你的设备上完成，我们只接收：
         </p>
         <ul>
@@ -172,7 +175,12 @@
         <p>
           联网功能只在你主动使用时，把必要数据发往你自己配置的地址：例如提交给 AI
           服务的提问与选中代码、安装依赖时访问 PyPI 的请求、执行
-          <code>git push</code> 时发往远端仓库的内容。这类流量适用对应第三方服务的隐私政策，我们不会在自己服务器上留存这些数据的副本。
+          <code>git push</code> 时发往远端仓库的内容，以及远程开发时连往你自己服务器的
+          SSH/SFTP 会话内容。这些地址与凭据都由你提供 ——
+          <strong>AI 功能使用的是你自己的 API Key 与服务商账户</strong>，额度、账单与用量由你与服务商直接结算，我们不参与计费，也无法访问对方账号后台。
+        </p>
+        <p>
+          使用这些功能意味着你需要遵守对应服务商的使用条款与服务协议（包括其对自动化调用、内容使用与再分发的规定），并自行承担相应费用；这类流量适用对方的隐私政策，我们不会在自己的服务器上留存副本。你也要对自己接入的服务器以及在上面执行的命令负责。
         </p>
       </section>
 
@@ -268,7 +276,7 @@
           <li>用户内容全部留在设备本地的应用沙盒内，我们不维护存放这些数据的服务器</li>
           <li>会员验证由 StoreKit 在本机完成，我们不保存小票、交易日志或购买历史</li>
           <li>密钥只存入 iOS 钥匙串，不会同步，也不会被写入项目文件、导出包或日志</li>
-          <li>安装包、Git HTTPS、AI 接口等网络请求均走 HTTPS 并校验证书（内置 CA 根证书）；应用未申请加密豁免（<code>ITSAppUsesNonExemptEncryption = false</code>）</li>
+          <li>安装包、Git HTTPS、AI 接口等网络请求均走 HTTPS 并校验证书（内置 CA 根证书）。应用使用的所有加密技术均处于美国《出口管理条例》（EAR）定义的豁免类别内，因此 Info.plist 中 <code>ITSAppUsesNonExemptEncryption</code> 声明为 <code>false</code>。具体描述见下方第 7 节（出口合规）。</li>
           <li>SSH 主机密钥采用"首次信任"机制并保存 SHA256
           指纹，指纹变更时默认拒绝连接，需要你重新确认</li>
           <li>AI 助手按能力分类授权（读取 / 写入 / 执行 / 联网 / 安装 /
@@ -278,8 +286,36 @@
         </ul>
       </section>
 
+      <section id="export-compliance">
+        <h2>7. 出口合规</h2>
+        <p>
+          PythonDeck 预先捆绑了标准开源密码学库，以便用户脚本可以直接实现自己的安全相关流程。具体包含：
+        </p>
+        <ul>
+          <li><strong>传输加密：</strong>对 PyPI、Git 仓库、AI
+            服务与 MCP 服务器的 HTTPS / WSS
+            请求使用iOS&nbsp;自带的&nbsp;<code>URLSession</code> / <code>Security.framework</code>（Apple
+            供给的 TLS 实现）。Git over SSH 使用 <code>swift-crypto</code>，它封装了 Apple
+            的 <code>CryptoKit</code>。</li>
+          <li><strong>预装第三方密码学库：</strong><code>cryptography</code> Python 包（当前版本
+            47.0.0，基于 OpenSSL 3.x，通过 Rust/cffi 绑定）预装在
+            App 里，供用户脚本离线导入。对称加密至高支持至 AES-256；非对称加密支持 RSA-4096 与 Ed25519。</li>
+          <li><strong>本地存储：</strong>仅使用 iOS
+            钥匙串（Apple 硬件支持的安全存储）保存 API Key
+            与凭据。我们自行实现任何专有密码算法。</li>
+        </ul>
+        <p>
+          本应用的分发属于美国《出口管理条例》(EAR) §740.17(b)(1) 定义的“面向大众市场（mass market）”商品类别，允许将标准加密软件
+          通过 Apple App Store 等消费者向全球公开发布。美国商务部工业与安全局（BIS）无需对 PythonDeck 的分发射范国另行颁发单独的出口许可。
+        </p>
+        <p>
+          <em>用户告知（EAR §740.17(e)(2)）：</em>加密软件与技术的出口与再出口受美国及其他司法管辖区法规约束。PythonDeck
+          及其捆绑的密码学组件不得向美国财政部“特别指认人名与拒绝实体名单（SDN）”上所列的国家、实体或个人，或受美国全面禁运的国家出口、再出口或使用。下载或使用本应用即表示您同意遵守适用的出口管制法律，不将本应用于适用法律禁止的用途。
+        </p>
+      </section>
+
       <section>
-        <h2>7. 儿童隐私</h2>
+        <h2>8. 儿童隐私</h2>
         <p>
           本应用是面向开发者的编程工具，不面向 13
           岁以下儿童，也不会主动收集此类信息。
@@ -287,14 +323,14 @@
       </section>
 
       <section>
-        <h2>8. 政策更新</h2>
+        <h2>9. 政策更新</h2>
         <p>
           当功能或系统权限发生变化时，我们可能会更新本隐私政策，更新时间显示在页面顶部，以本页最新发布的版本为准。
         </p>
       </section>
 
       <section>
-        <h2>9. 联系方式</h2>
+        <h2>10. 联系方式</h2>
         <p>
           如有隐私相关问题请联系：<br />
           <strong>lucky202408@gmail.com</strong>
@@ -305,7 +341,8 @@
         <p>
           © 2026 PythonDeck。隐私政策以最新发布版本为准。<br />
           技术支持：<a href="pythondeck-support.html">pythondeck-support.html</a>
-          · English: <a href="pythondeck-en-privacy.html">Privacy Policy</a>
+          · English: <a href="pythondeck-en-privacy.html">Privacy Policy</a><br />
+          使用条款：<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula">Apple 标准最终用户许可协议（STDEULA）</a>
         </p>
       </footer>
     </div>
