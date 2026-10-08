@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PythonDeck - 技术支持 / Support</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5, #0284c7);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.05em;
+            opacity: 0.92;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .support-section {
+            margin-bottom: 40px;
+        }
+
+        .support-section h2 {
+            color: #4338ca;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-left: 4px solid #4338ca;
+            padding-left: 15px;
+        }
+
+        .contact-method {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(67,56,202,0.15);
+        }
+
+        .contact-method h3 {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .email-link {
+            display: inline-block;
+            background: #4338ca;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .email-link:hover {
+            background: #312e81;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(67,56,202,0.3);
+        }
+
+        ul.tips { margin: 15px 0 5px 20px; }
+        ul.tips li { margin-bottom: 6px; }
+        code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 0.9em;
+            background: #eef2ff;
+            color: #312e81;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .warning {
+            margin-top: 15px;
+            padding: 12px 15px;
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            color: #7c4a03;
+            font-size: 0.95em;
+        }
+
+        details.faq {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+        }
+
+        details.faq summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #312e81;
+        }
+
+        details.faq p { margin-top: 10px; }
+        details.faq p:last-child { margin-bottom: 4px; }
+
+        .language-section {
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .language-section h3 {
+            color: #312e81;
+            margin-bottom: 15px;
+        }
+
+        .language-content { display: flex; gap: 30px; }
+        .language-content > div { flex: 1; }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f8f9fa;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+
+        @media (max-width: 768px) {
+            .container { margin: 20px auto; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 1.7em; }
+            .content { padding: 30px 20px; }
+            .language-content { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PythonDeck 技术支持 / Support</h1>
+            <p>iPhone / iPad 上的本地 Python 开发环境 · Local Python IDE on iOS</p>
+        </div>
+
+        <div class="content">
+            <div class="support-section">
+                <h2>联系我们 / Contact Us</h2>
+
+                <div class="contact-method">
+                    <h3>📧 邮件支持 / Email Support</h3>
+                    <p>在编辑、运行、调试 Python 代码，或使用包管理、Git、SSH、AI 助手、Notebook、Mini App、桌面小组件时遇到问题？欢迎联系我们。</p>
+                    <p>Issues with the editor, terminal, debugger, package manager, Git/SSH, AI assistant, Notebook, Mini Apps or the home-screen widget? Email us.</p>
+
+                    <a href="mailto:lucky202408@gmail.com" class="email-link">
+                        Email: lucky202408@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-method">
+                    <h3>🛠 问题反馈指南 / Issue Reporting Guide</h3>
+                    <p>为了更高效地定位问题，请在邮件中包含：</p>
+                    <p>Please include the following details:</p>
+
+                    <ul class="tips">
+                        <li>iOS / iPadOS 版本 · OS version</li>
+                        <li>设备型号（如 iPhone 12、iPad Air）· Device model</li>
+                        <li>App 版本（设置 → 关于 PythonDeck）· App version</li>
+                        <li>出问题的功能模块：编辑器 / 运行 / 控制台 / 终端 / 包管理 / Git / SSH / 调试器 / Notebook / AI 助手 / Mini App / 小组件 / 快捷指令 / 会员开通</li>
+                        <li>出错脚本片段与完整报错信息（含 traceback）· Code snippet and full traceback</li>
+                        <li>复现步骤 / Description &amp; steps</li>
+                        <li>相关截图（如有）· Screenshots if available</li>
+                    </ul>
+
+                    <div class="warning">
+                        ⚠️ 请在发件前移除截图或日志中的敏感信息：<strong>不要</strong>附带 API Key、Git 令牌、SSH 私钥或密码。这类凭据仅保存在你设备的钥匙串中，我们也无法访问。
+                        <br>Please redact secrets before sending: <strong>never</strong> attach API keys, Git tokens, SSH private keys or passwords.
+                    </div>
+                </div>
+            </div>
+
+            <div class="support-section">
+                <h2>常见问题 / FAQ</h2>
+
+                <details class="faq">
+                    <summary>提示"Runtime 未嵌入"或解释器一直未就绪 / "Runtime not embedded"</summary>
+                    <p>嵌入式 Python 运行时随 App 一起分发。若状态一直未就绪，请彻底退出 App 后重新打开；仍无效时从 App Store 重装最新版。重装不会删除你已保存的项目文件。</p>
+                    <p>Quit and reopen the app; if the runtime still isn't ready, reinstall from the App Store. Your projects are kept.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>安装包失败 / Package installation fails</summary>
+                    <p>包安装需要网络，依赖会装到当前项目的 <code>packages/</code> 目录。纯 Python 包通常可直接安装；含二进制扩展的原生库需要为 iOS 预编译的版本，若没有对应版本会失败，这属于平台限制而非 App 故障。</p>
+                    <p>Installing packages requires network access. Pure-Python wheels install normally; binary extensions need iOS-built wheels, otherwise installation fails by design.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>运行中的脚本点 Stop 没反应 / Stop button doesn't interrupt a script</summary>
+                    <p>停止通过 <code>KeyboardInterrupt</code> 生效，无法打断阻塞在 C 层调用中的脚本（例如 <code>time.sleep</code> 或某些原生库的长任务）。调试器的断点暂停与求值走独立通道，不受此限制。</p>
+                    <p>Interruption can't break calls blocked inside native code (e.g. <code>time.sleep</code>). Debugger pause/eval uses a separate channel and still works.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>Git push/pull 认证失败 / Git authentication fails</summary>
+                    <p>请检查 设置 → Git 与凭据 中该主机是否已保存用户名与令牌（令牌存于钥匙串，留空表示沿用原值）。HTTPS 远端需使用访问令牌而非账号密码；SSH 远端需先在 设置 → SSH Hosts 中保存主机与凭据。</p>
+                    <p>HTTPS remotes require a personal access token; SSH remotes require a saved host with credentials under Settings → SSH Hosts.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>SSH 提示主机密钥已变更并被拒绝 / "host key changed" error</summary>
+                    <p>主机密钥采用"首次信任"机制并保存 SHA256 指纹。指纹变化通常是服务器重装或密钥轮换，也可能是中间人风险。请先在服务器侧核对指纹，确认无误后再在 App 内删除该主机并重新连接。也可通过 设置 → SSH Hosts → Import known_hosts 预先导入指纹。</p>
+                    <p>Verify the new fingerprint on the server itself before trusting it again; you can import <code>known_hosts</code> to pin keys in advance.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>AI 助手没有回复 / The AI assistant doesn't respond</summary>
+                    <p>AI 功能需要网络，并依赖你自己配置的服务商。请确认 设置 → AI 模型服务 中已填入 API Key（仅存本机钥匙串）、已添加可用模型、接口地址可访问，并检查项目是否拒绝了相关权限请求（读取 / 写入 / 执行 / 联网 / 安装 / Git 分别授权）。</p>
+                    <p>AI calls go to the provider you configure. Check the API key, model list, endpoint reachability, and the per-capability permission prompts.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>桌面小组件不显示内容 / Widget shows nothing</summary>
+                    <p>小组件只显示摘要（收藏与最近项目、最近一次运行状态），不会在后台运行 Python，刷新时机由系统 WidgetKit 调度。若长期为空，请打开 App 一次让摘要更新。</p>
+                    <p>The widget only mirrors a local summary; refresh is scheduled by WidgetKit. Open the app once to update it.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>外接键盘快捷键 / Hardware keyboard shortcuts</summary>
+                    <p>支持 <code>⌘S</code> 保存、<code>⌘F</code> 查找、<code>⌘R</code> 运行、<code>⌘W</code> 关闭标签、<code>⌘P</code> 命令面板等。iPad 上可新建多个窗口，各窗口有独立的项目、标签、输出与会话。</p>
+                    <p>Shortcuts include <code>⌘S</code>, <code>⌘F</code>, <code>⌘R</code>, <code>⌘W</code>, <code>⌘P</code>. iPad supports multiple windows with independent sessions.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>内购、订阅与退款 / Purchases, subscriptions and refunds</summary>
+                    <p>会员（年度会员 / 终身会员）的付款、账单与退款均由 Apple 处理，我们无法看到你的支付方式或 Apple ID，也不在服务器上保存你的交易记录。</p>
+                    <p>换设备或重装后取回权益：请确认使用同一 Apple 账户，然后进入 <strong>设置 → PythonDeck Pro → 恢复购买</strong>。</p>
+                    <p>取消或管理自动续费：iOS <strong>设置 → 你的姓名 → 订阅</strong>；申请退款：Apple 的 <code>reportaproblem.apple.com</code>。</p>
+                    <p>Payments, billing and refunds are handled by Apple — we cannot see your payment method or issue refunds. Use <strong>Settings → PythonDeck Pro → Restore Purchases</strong> to recover benefits on the same Apple account, and manage renewals in iOS Settings → Subscriptions.</p>
+                </details>
+
+                <details class="faq">
+                    <summary>如何备份或迁移项目 / Backup and migration</summary>
+                    <p>应用数据保存在本机沙盒中。请通过项目菜单导出 ZIP，或使用 iOS「文件」App 访问应用目录进行备份；换设备时重新导入即可。</p>
+                    <p>Export a project as ZIP, or use the Files app to copy it out, then import it on another device.</p>
+                </details>
+            </div>
+
+            <div class="language-section">
+                <h3>多语言支持 / Multilingual Support</h3>
+
+                <div class="language-content">
+                    <div>
+                        <h4>中文支持</h4>
+                        <p>欢迎反馈 Bug、功能建议或使用体验。</p>
+                        <p>邮箱：lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #16a34a;">感谢你的支持！</p>
+                    </div>
+
+                    <div>
+                        <h4>English Support</h4>
+                        <p>Bug reports and feature requests are welcome.</p>
+                        <p>Email: lucky202408@gmail.com</p>
+                        <p style="margin-top: 15px; color: #16a34a;">Thank you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 PythonDeck. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                <a href="pythondeck-en-privacy.html" style="color: #4338ca; margin-right: 15px;">Privacy Policy (English)</a>
+                <a href="pythondeck-zh-privacy.html" style="color: #4338ca;">隐私政策（中文）</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

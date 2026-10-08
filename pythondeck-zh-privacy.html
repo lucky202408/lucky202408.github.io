@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PythonDeck — 隐私政策</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #3b82f6;
+        --container: 900px;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+          "Microsoft YaHei", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .wrap {
+        max-width: var(--container);
+        margin: 0 auto;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      section {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eef2f6;
+      }
+      h2,
+      h3,
+      h4 {
+        margin: 0.8rem 0 0.4rem;
+      }
+      ul {
+        margin: 0.25rem 0 0.75rem 1.25rem;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0.5rem 0;
+        width: 100%;
+      }
+      th,
+      td {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #eef2f6;
+        text-align: left;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.9em;
+        background: #f3f4f6;
+        padding: 0.05rem 0.3rem;
+        border-radius: 4px;
+      }
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --text: #e6eef8;
+          --muted: #9aa9bb;
+          --accent: #60a5fa;
+        }
+        code {
+          background: #1a2436;
+        }
+        section {
+          border-top-color: #1a2436;
+        }
+        th,
+        td {
+          border-color: #1a2436;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>PythonDeck 隐私政策</h1>
+        <p class="meta">
+          运行平台：iPhone 与 iPad（iOS/iPadOS）· Bundle ID：com.pythondeck.app<br />
+          最后更新日期：2026-10-08
+        </p>
+      </header>
+
+      <section>
+        <h2>1. 概述</h2>
+        <p>
+          PythonDeck 是一款运行在 iPhone 与 iPad
+          上的本地 Python 开发环境：内置 CPython 解释器、代码编辑器、终端、Notebook、包管理、Git
+          客户端、调试器，以及可选的 AI 编程助手。我们遵循"最小化数据收集"原则：应用没有账号体系，不需要注册，也没有我们自己搭建的后端服务器。你的项目、代码、Notebook、设置和运行历史默认只保存在设备上本应用的沙盒存储中，离线也能编辑和运行代码。
+        </p>
+
+        <h3>1.1 购买与订阅验证（StoreKit）</h3>
+        <p>
+          PythonDeck 提供两种开通 PythonDeck Pro 的方式：年度会员（自动续费订阅）与
+          终身会员（非消耗型一次性购买）。购买与权益验证全部通过 Apple 的 StoreKit
+          在你的设备上完成，我们只接收：
+        </p>
+        <ul>
+          <li>当前权益状态（哪个会员有效、订阅的续费/到期时间）</li>
+          <li>StoreKit 在本机交给 App 的交易信息，仅用于判定 Pro 功能是否已解锁</li>
+        </ul>
+        <p>
+          我们不运营接收这些信息的服务器，也不会把交易标识符、小票或购买记录写入你的项目文件、导出包或任何统计上报（应用内未嵌入统计
+          SDK）。付款、账单与退款由 Apple 处理，我们无法看到你的支付方式或 Apple ID。恢复购买使用 StoreKit
+          自带的同步机制，由 Apple 根据当前登录的 App Store 账户返回交易信息；取消订阅与订阅管理均在 Apple 的订阅设置中完成。
+        </p>
+
+        <h3>1.2 保存在你设备本地的数据</h3>
+        <ul>
+          <li>项目、源代码文件、Notebook 文件以及你导入的图片等素材</li>
+          <li>编辑器与应用偏好设置、运行历史、你主动创建的代码快照</li>
+          <li>你安装到项目里的 Python 依赖包</li>
+        </ul>
+        <p>
+          为了让 iOS 桌面小组件能显示并快速打开项目，应用会通过 Apple App
+          Group 容器向小组件同步一份很小的摘要（你收藏或最近打开的项目名称、最近一次运行的状态）。小组件不会在后台运行
+          Python 代码。
+        </p>
+
+        <h3>1.3 密钥与凭据</h3>
+        <p>
+          如果你选择保存敏感信息，它们只会写入设备上 iOS
+          系统钥匙串（Keychain），不会出现在导出文件、日志或任何统计上报中，包括：
+        </p>
+        <ul>
+          <li>AI 模型服务的 API Key（你配置的 OpenAI、Anthropic 或兼容服务）</li>
+          <li>Git HTTPS 远端使用的令牌或密码</li>
+          <li>SSH 主机密码与私钥</li>
+          <li>你在工具库/Mini App 里定义的机密环境变量</li>
+        </ul>
+        <p>
+          这些信息不会同步给我们，也不会上传到任何服务器。你可以随时在
+          <strong>设置 → 密钥（Keychain）</strong>中查看并删除。
+        </p>
+
+        <h3>1.4 由你授权的设备权限</h3>
+        <p>
+          应用可以把系统能力开放给你编写的 Python 脚本使用（<code>ios.camera</code>
+          相机、<code>ios.photos</code> 相册、<code>ios.location</code>
+          位置、<code>ios.bluetooth</code>
+          蓝牙，以及剪贴板、分享、触感反馈、通知）。每一项都会触发 iOS
+          标准授权弹窗，仅在你或你的脚本明确调用时才使用，并可随时在
+          <em>系统设置 → PythonDeck</em>
+          中关闭。通过这些权限读取的数据默认留在设备本地，除非你自己的代码把它发送出去。本版本应用未开启健康数据（HealthKit）访问。
+        </p>
+
+        <h3>1.5 由你自行连接的服务</h3>
+        <p>
+          联网功能只在你主动使用时，把必要数据发往你自己配置的地址：例如提交给 AI
+          服务的提问与选中代码、安装依赖时访问 PyPI 的请求、执行
+          <code>git push</code> 时发往远端仓库的内容。这类流量适用对应第三方服务的隐私政策，我们不会在自己服务器上留存这些数据的副本。
+        </p>
+      </section>
+
+      <section>
+        <h2>2. 我们不会收集的信息</h2>
+        <ul>
+          <li>姓名、邮箱、手机号，也不要求注册账号</li>
+          <li>广告标识符、通讯录与日历数据</li>
+          <li>应用内未嵌入任何第三方统计或埋点 SDK</li>
+          <li>支付卡号与账单信息（会员由 Apple 计费，仅在本机验证，详见 1.1）</li>
+          <li>不会向我们上传位置、相册、相机或麦克风数据</li>
+          <li>不会出售或共享你的数据</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. 数据使用目的</h2>
+        <ul>
+          <li>提供核心功能：在设备本地编辑、运行、调试代码并做版本管理</li>
+          <li>在设备本地验证 PythonDeck Pro 会员状态，使已购权益生效</li>
+          <li>安全保存你的密钥，以便 AI、Git、SSH 功能能按你的授权完成认证</li>
+          <li>为桌面小组件与快捷指令（Run Python Script）提供它们所展示的本地数据</li>
+          <li>回应你通过邮件提交的技术支持请求</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. 使用的第三方服务</h2>
+        <p>
+          下表中的服务均由你的设备直接访问，只在你对应功能的操作中产生，不用于广告投放或跨应用追踪。
+        </p>
+        <table>
+          <tr>
+            <th>服务</th>
+            <th>用途</th>
+          </tr>
+          <tr>
+            <td>你选择的 AI 服务商（OpenAI、Anthropic 或你配置的兼容接口）</td>
+            <td>AI 助手对话与改代码，发送你输入的提问和选中的代码</td>
+          </tr>
+          <tr>
+            <td>PyPI 官方包索引</td>
+            <td>查询包信息、下载你安装依赖包</td>
+          </tr>
+          <tr>
+            <td>你添加的 Git 远端（GitHub、GitLab 或自建仓库）</td>
+            <td>通过 HTTPS 或 SSH 进行 clone / fetch / pull / push</td>
+          </tr>
+          <tr>
+            <td>你添加的 SSH / SFTP 主机</td>
+            <td>远程终端会话、远程文件浏览与编辑</td>
+          </tr>
+          <tr>
+            <td>你配置的 MCP 服务器（实验性功能）</td>
+            <td>为 AI 助手提供工具调用与持续通知</td>
+          </tr>
+          <tr>
+            <td>Apple StoreKit / App Store</td>
+            <td>PythonDeck Pro 购买（年度会员、终身会员）、权益验证、恢复购买与订阅管理</td>
+          </tr>
+          <tr>
+            <td>Apple 系统服务</td>
+            <td>钥匙串存储、权限弹窗、App Store 付费、桌面小组件</td>
+          </tr>
+        </table>
+        <p class="meta">
+          本地开源组件（ZIPFoundation、Citadel/SwiftNIO）全部在你的设备上运行，不会向组件作者发送数据。
+        </p>
+      </section>
+
+      <section>
+        <h2>5. 数据保留与删除</h2>
+        <ul>
+          <li>你可以随时在应用内删除项目、文件、运行历史与快照，或通过 iOS「文件」App 导出后自行处理。</li>
+          <li>你可以随时在系统设置中撤销相机、相册、位置、蓝牙等权限。</li>
+          <li>会员状态不由我们保存：应用每次校验权益时直接从 StoreKit 读取，因此我们这一侧不存在需要删除的购买记录。取消订阅或退款由
+          Apple 处理，下次校验时在设备上生效。</li>
+          <li>卸载应用即会移除其沙盒内的项目数据。</li>
+          <li>
+            受 iOS
+            系统机制影响，钥匙串条目可能在卸载重装后仍保留。若要彻底清除，请先在<strong>设置 →
+            密钥（Keychain）</strong>中删除已保存的密钥，并清理 AI Key、Git 凭据与 SSH 主机，再卸载应用。
+          </li>
+        </ul>
+        <p>
+          由于我们不运营任何服务器，你设备上的数据在我们这一侧不存在需要保留或对外提供的副本。若你通过邮件联系我们，来信仅在处理问题所需的期限内保留，你也可以要求我们删除。
+        </p>
+      </section>
+
+      <section>
+        <h2>6. 数据安全</h2>
+        <ul>
+          <li>用户内容全部留在设备本地的应用沙盒内，我们不维护存放这些数据的服务器</li>
+          <li>会员验证由 StoreKit 在本机完成，我们不保存小票、交易日志或购买历史</li>
+          <li>密钥只存入 iOS 钥匙串，不会同步，也不会被写入项目文件、导出包或日志</li>
+          <li>安装包、Git HTTPS、AI 接口等网络请求均走 HTTPS 并校验证书（内置 CA 根证书）；应用未申请加密豁免（<code>ITSAppUsesNonExemptEncryption = false</code>）</li>
+          <li>SSH 主机密钥采用"首次信任"机制并保存 SHA256
+          指纹，指纹变更时默认拒绝连接，需要你重新确认</li>
+          <li>AI 助手按能力分类授权（读取 / 写入 / 执行 / 联网 / 安装 /
+          Git），改动文件必须经你在差异视图里点击接受才会落盘</li>
+          <li>若你在系统中开启"与 App
+          开发者共享分析数据"，Apple 可能向我们提供匿名崩溃与性能诊断信息；我们在此之外不额外采集任何数据</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7. 儿童隐私</h2>
+        <p>
+          本应用是面向开发者的编程工具，不面向 13
+          岁以下儿童，也不会主动收集此类信息。
+        </p>
+      </section>
+
+      <section>
+        <h2>8. 政策更新</h2>
+        <p>
+          当功能或系统权限发生变化时，我们可能会更新本隐私政策，更新时间显示在页面顶部，以本页最新发布的版本为准。
+        </p>
+      </section>
+
+      <section>
+        <h2>9. 联系方式</h2>
+        <p>
+          如有隐私相关问题请联系：<br />
+          <strong>lucky202408@gmail.com</strong>
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          © 2026 PythonDeck。隐私政策以最新发布版本为准。<br />
+          技术支持：<a href="pythondeck-support.html">pythondeck-support.html</a>
+          · English: <a href="pythondeck-en-privacy.html">Privacy Policy</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

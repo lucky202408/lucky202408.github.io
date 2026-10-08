@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PythonDeck — Privacy Policy</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111827;
+        --muted: #6b7280;
+        --accent: #3b82f6;
+        --container: 900px;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        margin: 0;
+        padding: 2rem;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .wrap {
+        max-width: var(--container);
+        margin: 0 auto;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      section {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eef2f6;
+      }
+      h2,
+      h3,
+      h4 {
+        margin: 0.8rem 0 0.4rem;
+      }
+      ul {
+        margin: 0.25rem 0 0.75rem 1.25rem;
+      }
+      table {
+        border-collapse: collapse;
+        margin: 0.5rem 0;
+      }
+      th,
+      td {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #eef2f6;
+        text-align: left;
+      }
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.92em;
+        background: #f3f4f6;
+        padding: 0.05rem 0.3rem;
+        border-radius: 4px;
+      }
+      footer {
+        margin-top: 2rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0b1220;
+          --text: #e6eef8;
+          --muted: #9aa9bb;
+          --accent: #60a5fa;
+        }
+        code {
+          background: #1a2436;
+        }
+        section {
+          border-top-color: #1a2436;
+        }
+        th,
+        td {
+          border-color: #1a2436;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>PythonDeck Privacy Policy</h1>
+        <p class="meta">
+          Platform: iPhone and iPad (iOS/iPadOS) · Bundle ID: com.pythondeck.app<br />
+          Last Updated: October 8, 2026
+        </p>
+      </header>
+
+      <section>
+        <h2>1. Overview</h2>
+        <p>
+          PythonDeck is a local Python development environment for
+          iPhone and iPad: an embedded CPython runtime, editor, terminal,
+          Notebook, package manager, Git client, debugger and an optional AI
+          coding assistant. We follow the principle of “data minimization”.
+          The app has no user account, no registration step and no backend of
+          our own. Your projects, code, notebooks, settings and run history
+          stay inside the app’s sandboxed storage on your device by default,
+          and editing and running code work fully offline.
+        </p>
+
+        <h3>1.1 Purchase and Subscription Verification (StoreKit)</h3>
+        <p>
+          PythonDeck sells two products that unlock the same PythonDeck Pro
+          tier: an <strong>Annual Membership</strong> (auto-renewable
+          subscription) and a <strong>Lifetime Membership</strong> (non-consumable
+          purchase). Verification runs entirely on your device through Apple's
+          StoreKit, and consists of:
+        </p>
+        <ul>
+          <li>Your current entitlement state — which membership is active, and the renewal date of the subscription</li>
+          <li>Transaction information that StoreKit hands to the app locally, used only to decide whether Pro features are unlocked</li>
+        </ul>
+        <p>
+          We do not operate a server that receives this information, and we do
+          not write transaction identifiers, receipts or purchase history into
+          your project files, exports or any analytics upload — the app embeds
+          no analytics SDK. Payments, billing details and refunds are handled by
+          Apple; we never see your payment method or Apple ID. Restoring
+          purchases uses StoreKit's own sync, which asks Apple for the
+          transactions tied to the signed-in App Store account. Subscription
+          cancellation and management happen in Apple's subscription settings.
+        </p>
+
+        <h3>1.2 Data Stored Locally on Your Device</h3>
+        <ul>
+          <li>Projects, source files, Notebook files and imported assets</li>
+          <li>Editor and app preferences, run history and code snapshots you create</li>
+          <li>Python packages you install into a project</li>
+        </ul>
+        <p>
+          A small summary (project names you mark as favorites or open
+          recently, plus the status of your last run) is shared with the iOS
+          home-screen widget through an Apple App Group container so the widget
+          can show and open your projects. The widget never runs Python code
+          in the background.
+        </p>
+
+        <h3>1.3 Secrets and Credentials</h3>
+        <p>
+          If you choose to store sensitive values, they are written to the iOS
+          Keychain on your device and are never included in exported files,
+          logs or analytics. This covers:
+        </p>
+        <ul>
+          <li>AI service API keys (OpenAI-, Anthropic- or compatible providers you configure)</li>
+          <li>Git account tokens or passwords for HTTPS remotes</li>
+          <li>SSH host passwords and private keys</li>
+          <li>Secret environment variables you define for Mini Apps</li>
+        </ul>
+        <p>
+          These values are not synced to us or to any server we operate. You
+          can view and delete them at any time under
+          <strong>Settings → Secrets (Keychain)</strong>.
+        </p>
+
+        <h3>1.4 Device Permissions You Grant</h3>
+        <p>
+          The app can expose system capabilities to the Python scripts you run
+          (<code>ios.camera</code>, <code>ios.photos</code>,
+          <code>ios.location</code>, <code>ios.bluetooth</code>, clipboard,
+          share sheet, haptics, notifications). Each capability triggers the
+          standard iOS permission prompt, is used only when you or your script
+          explicitly requests it, and can be revoked in
+          <em>iOS Settings → PythonDeck</em>. Data read through these
+          permissions stays on your device unless your own code sends it
+          somewhere. Access to health data (HealthKit) is not enabled in the
+          current released version of this app.
+        </p>
+
+        <h3>1.5 Services You Connect to Yourself</h3>
+        <p>
+          Online features send data only to the endpoints you configure, and
+          only while you actively use that feature — for example the prompt
+          and code you submit to an AI provider, the PyPI requests when you
+          install a package, or your <code>git push</code> to a remote
+          repository. The privacy policies of those third-party services apply
+          to that traffic, and we do not receive or store a copy of it on our
+          own servers.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Information We Do Not Collect</h2>
+        <ul>
+          <li>No name, email address, phone number or user account</li>
+          <li>No advertising identifiers, no contact or address book data</li>
+          <li>No analytics or tracking SDK is embedded in the app</li>
+          <li>No payment or billing details — memberships are billed by Apple and verified on your device (see 1.1)</li>
+          <li>No location, photos, camera or microphone data sent to us</li>
+          <li>We do not sell or share your data</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Purpose of Data Usage</h2>
+        <ul>
+          <li>To provide core functionality: editing, running, debugging and version-controlling your code on device</li>
+          <li>To verify PythonDeck Pro membership status so purchased benefits apply on your device</li>
+          <li>To keep your secrets safe so that AI, Git and SSH features can authenticate on your behalf</li>
+          <li>To serve the home-screen widget and Shortcuts (“Run Python Script”) with the local data they display</li>
+          <li>To respond to support requests you send us by email</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Third-Party Services Used</h2>
+        <p>
+          The services below are contacted directly from your device, at your
+          instruction, for the corresponding feature. They are not used for
+          advertising or cross-app tracking.
+        </p>
+        <table>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>AI provider of your choice (OpenAI, Anthropic or a compatible endpoint you configure)</td>
+            <td>AI assistant chat and code edits; sends the prompt and the code you select</td>
+          </tr>
+          <tr>
+            <td>PyPI package index</td>
+            <td>Searching package metadata and downloading packages you install</td>
+          </tr>
+          <tr>
+            <td>Git remotes you add (GitHub, GitLab or your own server)</td>
+            <td>Clone, fetch, pull and push over HTTPS or SSH</td>
+          </tr>
+          <tr>
+            <td>SSH/SFTP hosts you add</td>
+            <td>Remote terminal sessions and remote file browsing and editing</td>
+          </tr>
+          <tr>
+            <td>MCP servers you configure (experimental)</td>
+            <td>Tool calls and notification streams for the AI assistant</td>
+          </tr>
+          <tr>
+            <td>Apple StoreKit / App Store</td>
+            <td>Purchase of PythonDeck Pro (annual membership, lifetime membership), entitlement verification, restoring purchases and subscription management</td>
+          </tr>
+          <tr>
+            <td>Apple (system services)</td>
+            <td>Keychain storage, permission prompts, App Store purchases, home-screen widget</td>
+          </tr>
+        </table>
+        <p class="meta">
+          Local open-source components (ZIPFoundation, Citadel/SwiftNIO) run
+          entirely on your device and do not send data to their authors.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Data Retention and Deletion</h2>
+        <ul>
+          <li>You can delete projects, files, run history and snapshots at any time inside the app, or export them to the iOS Files app.</li>
+          <li>You can revoke device permissions at any time in iOS Settings.</li>
+          <li>Membership status is not kept by us: it is re-read from StoreKit each time the app checks entitlements, so there is no purchase record of yours on our side to delete. Cancelling or refunding a purchase is handled by Apple and takes effect on the device at the next check.</li>
+          <li>Deleting the app removes the sandboxed project data it contains.</li>
+          <li>
+            Keychain items may survive an app reinstall due to iOS behavior. To
+            remove them completely, delete your stored secrets in
+            <strong>Settings → Secrets (Keychain)</strong>, and clear AI keys,
+            Git credentials and SSH hosts before uninstalling.
+          </li>
+        </ul>
+        <p>
+          Since we operate no servers, there is no copy of your data on our
+          side to retain or hand over. If you contact us by email, the
+          message you send is kept only as long as needed to answer you, and
+          you can ask us to delete it.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Data Security</h2>
+        <ul>
+          <li>All user content stays inside the app sandbox on your device; we maintain no servers that store it</li>
+          <li>Membership verification is performed locally by StoreKit; we keep no receipts, transaction logs or purchase history</li>
+          <li>Secrets are stored in the iOS Keychain and are never synced or written into project files, exports or logs</li>
+          <li>Network requests for packages, Git over HTTPS and AI calls use HTTPS with certificate validation (bundled CA store); the app declares no encryption exemption (<code>ITSAppUsesNonExemptEncryption = false</code>)</li>
+          <li>SSH host keys use trust-on-first-use with stored SHA256 fingerprints; a changed fingerprint blocks the connection unless you re-confirm it</li>
+          <li>The AI assistant requires per-capability approval (Read / Write / Execute / Network / Install / Git), and file changes must be accepted through a diff view</li>
+          <li>If you enable “Share iPhone Analytics with Developers” at the system level, Apple may provide us with anonymous crash and performance diagnostics; we do not add our own analytics on top of these</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7. Children’s Privacy</h2>
+        <p>
+          This application is a developer tool and is not intended for children
+          under the age of 13, and we do not knowingly collect such information.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Policy Updates</h2>
+        <p>
+          We may update this Privacy Policy from time to time, for example when
+          new features or permissions are added. The latest update date is
+          displayed at the top of this page, and the current published version
+          of this page prevails.
+        </p>
+      </section>
+
+      <section>
+        <h2>9. Contact Information</h2>
+        <p>
+          If you have any privacy-related questions, please contact:<br />
+          <strong>lucky202408@gmail.com</strong>
+        </p>
+      </section>
+
+      <footer>
+        <p>
+          © 2026 PythonDeck. The latest published version of
+          this policy shall prevail.<br />
+          Support: <a href="pythondeck-support.html">pythondeck-support.html</a>
+          · 中文版: <a href="pythondeck-zh-privacy.html">隐私政策</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
